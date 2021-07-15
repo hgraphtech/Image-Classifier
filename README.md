@@ -1,4 +1,3 @@
-# mini-proj
-Mini projects
+Image classifier
 
-These are some demo projects
+Demo of image classification using transfer learning
