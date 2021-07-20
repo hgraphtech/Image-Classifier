@@ -4,7 +4,7 @@ The classifier model is trained using transfer learning to fine tune a resnet mo
 
 To view the classifier on Heroku: https://hgraph-classifier.herokuapp.com/
 
-To launch the webserver on localhost in development mode, install the dependencies and run:
-export FLASK_APP=app
-export FLASK_ENV=development
-flask run
+To launch the webserver on localhost in development mode, install the dependencies and run:  
+export FLASK_APP=app  
+export FLASK_ENV=development  
+flask run  
