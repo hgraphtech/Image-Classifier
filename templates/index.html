@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classifier Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dropzone.css') }}">
+</head>
+<body>
+    <h1>Image Classifier</h1>
+    <p>This is a demo of an image classifier which can identify dog breeds.</p>
+    <p>The model has been trained by transfer learning on a resnet model, fine tuned to a training dataset of labelled dog breeds.</p>
+    <p>Drag an image of into the space below and select classify to see the model prediction.</p>
+
+    <p></p>
+    <form action="/" class="dropzone" id="my-dropzone"></form>
+    </form>
+    <script src="{{ url_for('static', filename='dropzone.js') }}"></script>
+
+    <p></p>
+    <input type="button" onclick="location.href='{{ url_for('index') }}';" value="Classify!" />
+    
+    {% for d in data %}
+    <p>Filename: {{ d[0] }}</p>
+    <p>Breed: {{ d[1] }}</p>
+    <p>Probability: {{ d[2] }}</p>
+    {% endfor %}
+</html>
+
