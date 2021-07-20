@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
-from fastbook import *
-from fastai.vision.widgets import *
+from fastai.learner import *
+from fastai.imports import *
+from fastai.vision.core import *
 
 def predict(img):
     learn_inf = load_learner('export.pkl')
