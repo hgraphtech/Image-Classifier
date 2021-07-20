@@ -23,8 +23,9 @@ def index():
 def upload_file():
     uf = request.files['file']
     filename = uf.filename
-    pic = uf.read()
-    pred,prob = predict(pic)
+    uf.save(f'static/images/{filename}')
+    image = PILImage.create(f'static/images/{filename}')
+    pred,prob = predict(image)
     data.append([filename,pred,prob])
     return '', 204
 
