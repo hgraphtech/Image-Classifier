@@ -1,5 +1,6 @@
-flask
-gunicorn
+--find-links https://download.pytorch.org/whl/torch_stable.html
 torch==1.9.0+cpu
 torchvision==0.10.0+cpu
 fastai
+flask
+gunicorn
